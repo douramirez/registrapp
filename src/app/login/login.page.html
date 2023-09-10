@@ -1,0 +1,33 @@
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="text-align: center;">Registrar asistencias</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+    <form [formGroup]="formularioLogin">
+    
+      <br>
+      <ion-item>
+        <ion-input formControlName="userName"  type="text" placeholder="" >Usuario</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="userPass"  type="password" placeholder="">Contraseña</ion-input>
+      </ion-item>
+     
+      <ion-button expand="block" shape="round" color="primary" (click)="guardarDatosUsuario()">
+          Ingresar
+      </ion-button>
+      <br>
+      <ion-button expand="block" color="primary" routerLink="/restablecer"> Recuperar Contraseña </ion-button>
+      
+    </form>
+  <br>
+  <br>
+  
+</ion-content>
+
+
+
