@@ -13,12 +13,12 @@
 </style>
   <ion-content class="container"> Control de Asistencia
     <ion-list>
-      <ion-item>
+      <ion-item *ngFor="let personaje of personajes">
         <ion-avatar slot="start">
           <img src="./assets/icon/Mou1.jpeg" alt="">
         </ion-avatar>
-        <ion-label> Thomas Foncea
-          <br>
+        <ion-label> {{ personaje.firstName }} {{personaje.lastName}}
+                    <br>
           <ion-checkbox slot="start">Presente</ion-checkbox>
           <ion-checkbox slot="end">Ausente</ion-checkbox>
         </ion-label>
@@ -80,3 +80,33 @@
     </footer>
 
   </ion-content>
+
+
+  <!-- <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title color="primary">Asistencia</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <style>
+    .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    position: bottom;
+  }
+  </style>
+  <ion-content class="container"> Control de Asistencia
+    <ion-list>
+      <ion-item *ngFor="let personaje of apiService.personajes">
+        <ion-avatar slot="start">
+          <img [src]="personaje.avatar" alt="">
+        </ion-avatar>
+        <ion-label>
+          <br>
+          {{ personaje.firstName }} {{ personaje.lastName }}
+          <ion-checkbox slot="start">Presente</ion-checkbox>
+          <ion-checkbox slot="end">Ausente</ion-checkbox>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content> -->

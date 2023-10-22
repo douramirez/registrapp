@@ -51,6 +51,7 @@ export class LoginPage implements OnInit {
       console.log(nombreUsuarioAutenticado);
       console.log("Usuario iniciado correctamente");
       this.StateService.setNombreUsuario = nombreUsuarioAutenticado.nombre;
+      this.StateService.setUserIsLogged(true);
       this.router.navigate(['/home']);
     }
 
