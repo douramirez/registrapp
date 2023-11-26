@@ -19,6 +19,7 @@ interface Usuario {
 
 export class LoginPage implements OnInit {
   formularioLogin: FormGroup;
+  loginForm: any;
 
   constructor(private router: Router, private toastController: ToastController, private StateService: StateService, private fb: FormBuilder) {
     this.formularioLogin = this.fb.group({
@@ -54,12 +55,6 @@ export class LoginPage implements OnInit {
       this.StateService.setUserIsLogged(true);
       this.router.navigate(['/home']);
     }
-
-
-
-
-
-
 
   }
 }

@@ -15,7 +15,7 @@ export class GuardianGuard implements CanActivate {
 
 
   canActivate(): boolean {
-    let  isLogged:boolean = false;
+    let isLogged:boolean = false;
     this.stateService.userIsLogged().subscribe(
       (logged) => {
         isLogged = logged;

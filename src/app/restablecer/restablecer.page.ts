@@ -17,6 +17,7 @@ interface Usuario {
   styleUrls: ['./restablecer.page.scss'],
 })
 export class RestablecerPage implements OnInit {
+  [x: string]: any;
   formulariorestablecer: FormGroup;
 
   constructor(private router: Router,private fb: FormBuilder,private toastController: ToastController, private StateService: StateService) {

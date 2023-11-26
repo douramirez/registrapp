@@ -11,63 +11,27 @@
   position: bottom;
 }
 </style>
-  <ion-content class="container"> Control de Asistencia
-    <ion-list>
-      <ion-item *ngFor="let personaje of personajes">
-        <ion-avatar slot="start">
-          <img src="./assets/icon/Mou1.jpeg" alt="">
-        </ion-avatar>
-        <ion-label> {{ personaje.firstName }} {{personaje.lastName}}
-                    <br>
-          <ion-checkbox slot="start">Presente</ion-checkbox>
-          <ion-checkbox slot="end">Ausente</ion-checkbox>
-        </ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="./assets/icon/Ale1.jpg">
-        </ion-avatar>
-        <ion-label> Alessandro Rojas
-          <br>
-          <ion-checkbox slot="start">Presente</ion-checkbox>
-          <ion-checkbox slot="end">Ausente</ion-checkbox>
-        </ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="./assets/icon/Endederman1.jpg">
-        </ion-avatar>
-        <ion-label> Yeremias Venegas
-          <br>
-          <ion-checkbox slot="start">Presente</ion-checkbox>
-          <ion-checkbox slot="end">Ausente</ion-checkbox>
-        </ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="./assets/icon/brandon1.jpg">
-        </ion-avatar>
-        <ion-label> Juan Perez
-          <br>
-          <ion-checkbox slot="start">Presente</ion-checkbox>
-          <ion-checkbox slot="end">Ausente</ion-checkbox>
-        </ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="./assets/icon/ale2.jpg">
-        </ion-avatar>
-        <ion-label> Luis Sandoval
-          <br>
-          <ion-checkbox slot="start">Presente</ion-checkbox>
-          <ion-checkbox slot="end">Ausente</ion-checkbox>
-        </ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content class="container"> Control de Asistencia
+  <ion-list>
+    <ion-item *ngFor="let personaje of personajes">
+      <ion-avatar slot="start">
+        <img [src]="" alt="">
+      </ion-avatar>
+      <ion-label> {{ personaje.firstName }} {{personaje.lastName}}
+                  <br>
+        <ion-radio-group [(ngModel)]="personaje.status">
+          <ion-item>
+            <ion-label>Presente</ion-label>
+            <ion-radio slot="start" value="Presente"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Ausente</ion-label>
+            <ion-radio slot="end" value="ausente"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
 
 
@@ -82,31 +46,4 @@
   </ion-content>
 
 
-  <!-- <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-title color="primary">Asistencia</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <style>
-    .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    position: bottom;
-  }
-  </style>
-  <ion-content class="container"> Control de Asistencia
-    <ion-list>
-      <ion-item *ngFor="let personaje of apiService.personajes">
-        <ion-avatar slot="start">
-          <img [src]="personaje.avatar" alt="">
-        </ion-avatar>
-        <ion-label>
-          <br>
-          {{ personaje.firstName }} {{ personaje.lastName }}
-          <ion-checkbox slot="start">Presente</ion-checkbox>
-          <ion-checkbox slot="end">Ausente</ion-checkbox>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-content> -->
+  
