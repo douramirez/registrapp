@@ -13,9 +13,9 @@
 </style>
 <ion-content class="container"> Control de Asistencia
   <ion-list>
-    <ion-item *ngFor="let personaje of personajes">
+    <ion-item *ngFor="let personaje of personaje">
       <ion-avatar slot="start">
-        <img [src]="" alt="">
+        <img [src]="personaje.image" alt="">
       </ion-avatar>
       <ion-label> {{ personaje.firstName }} {{personaje.lastName}}
                   <br>
